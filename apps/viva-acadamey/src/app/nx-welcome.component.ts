@@ -184,6 +184,7 @@ import { CommonModule } from '@angular/common';
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
+
             .list-item-link {
                 align-items: center;
                 border-radius: 0.75rem;
