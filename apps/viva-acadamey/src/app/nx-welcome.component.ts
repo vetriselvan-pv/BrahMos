@@ -852,5 +852,6 @@ export class NxWelcomeComponent {
     newSrc: string = '';
     myClick() {
         let varr;
+        let nn;
     }
 }
