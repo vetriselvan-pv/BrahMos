@@ -1,8 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-/* eslint-disable */
-
 @Component({
     selector: 'brahmos-nx-welcome',
     standalone: true,
@@ -849,10 +846,5 @@ nx affected:e2e</pre>
     encapsulation: ViewEncapsulation.None,
 })
 export class NxWelcomeComponent {
-    newSrc: string = '';
-    myClick() {
-        let varr;
-        let nn;
-        var oo;
-    }
+    newSrc = '';
 }
