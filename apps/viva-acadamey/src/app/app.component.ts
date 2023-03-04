@@ -3,12 +3,12 @@ import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'bramos-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    standalone: true,
+    imports: [NxWelcomeComponent, RouterModule],
+    selector: 'brahmos-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'viva-acadamey';
+    title = 'viva-acadamey';
 }
