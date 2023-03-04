@@ -853,5 +853,6 @@ export class NxWelcomeComponent {
     myClick() {
         let varr;
         let nn;
+        var oo;
     }
 }
