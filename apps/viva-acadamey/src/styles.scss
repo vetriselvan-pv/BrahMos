@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+$primary: #e9e1f8;
+$primary_font: #0e0b19;
+$primary_light_font: #525666;
+$Secondary_font: #3f3644;
+$swatch_5: #ada2b0;
+$primary_btn: #432ca6;
+$error: #c44832;
+$warning: #d1964f;
+$primary_bg: #9986eb;
+
+@font-face {
+    font-family: Sansita;
+    src: url(./assets/fonts/Sansita-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Sansita';
+}
+
+body {
+    background-color: $primary;
+}

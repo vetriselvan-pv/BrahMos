@@ -1,20 +1,30 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {}
-  },
-  "exclude": ["node_modules", "tmp"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2017", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@brahmos/angular-core": ["libs/angular-core/src/index.ts"],
+            "@brahmos/custom-studio": ["libs/custom-studio/src/index.ts"],
+            "@brahmos/shared-directives": [
+                "libs/shared-directives/src/index.ts"
+            ],
+            "@brahmos/shared-modal": ["libs/shared-modal/src/index.ts"],
+            "@brahmos/studio-core": ["libs/studio-core/src/index.ts"],
+            "@brahmos/studio-modal": ["libs/studio-modal/src/index.ts"],
+            "@brahmos/viva-aca-shared": ["libs/viva-aca-shared/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
 }

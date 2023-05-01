@@ -1,0 +1,18 @@
+<mat-card class="menu-container">
+  <div>
+    <mat-accordion class="menu-accordion">
+      <ng-container *ngFor="let menu of menuList; let index = index">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title [innerHTML]="menu.heading">
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div >
+            <db-menu-bar-list [optionlist]="menu.options">
+            </db-menu-bar-list>
+          </div>
+        </mat-expansion-panel>
+      </ng-container>
+    </mat-accordion>
+  </div>
+</mat-card>

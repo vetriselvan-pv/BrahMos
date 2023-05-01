@@ -1,0 +1,11 @@
+<div class="menu-container">
+  <div class="menu-logo">
+    <span>Viva Academy</span>
+  </div>
+  <div class="menu-content">
+    <ng-container *ngFor="let menu of menuList">
+      <brahmos-menu-bar-list [menu]="menu">
+      </brahmos-menu-bar-list>
+    </ng-container>
+  </div>
+</div>

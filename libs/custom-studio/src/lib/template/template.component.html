@@ -1,0 +1,36 @@
+<ng-container *ngIf="item">
+  <ng-container [ngSwitch]="item.tagName">
+    <!-- Div  -->
+    <ng-container *ngSwitchCase="'div'">
+      <div [dbDraggable]="item" [dbDroppable]="{ zone : 'dbZone' }"  (droppableComplete)="onDrog($event)" class="default-div">
+        <ng-container *ngFor="let nextItem of item.child">
+          <db-template [item]="nextItem"></db-template>
+        </ng-container>
+      </div>
+    </ng-container>
+    <!-- h1  -->
+    <ng-container *ngSwitchCase="'h1'">
+      <h1 [dbDraggable]="item" [ngClass]="item.cssClass" [innerHTML]="'Heading 1'"></h1>
+    </ng-container>
+    <!-- h2  -->
+    <ng-container *ngSwitchCase="'h2'">
+      <h2 [dbDraggable]="item" [ngClass]="item.cssClass" [innerHTML]="item.value"></h2>
+    </ng-container>
+    <!-- h3 -->
+    <ng-container *ngSwitchCase="'h3'">
+      <h3 [dbDraggable]="item" [ngClass]="item.cssClass" [innerHTML]="item.value"></h3>
+    </ng-container>
+    <!-- h4 -->
+    <ng-container *ngSwitchCase="'h4'">
+      <h4 [dbDraggable]="item" [ngClass]="item.cssClass" [innerHTML]="item.value"></h4>
+    </ng-container>
+    <!-- h5 -->
+    <ng-container *ngSwitchCase="'h5'">
+      <h5 [ngClass]="item.cssClass" [innerHTML]="item.value"></h5>
+    </ng-container>
+    <!-- h6 -->
+    <ng-container *ngSwitchCase="'h6'">
+      <h6 [ngClass]="item.cssClass" [innerHTML]="item.value"></h6>
+    </ng-container>
+  </ng-container>
+</ng-container>

@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+/* eslint-disable */
+
 @Component({
     selector: 'brahmos-nx-welcome',
-    standalone: true,
-    imports: [CommonModule],
     template: `
         <!--
      * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -181,7 +181,6 @@ import { CommonModule } from '@angular/common';
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
-
             .list-item-link {
                 align-items: center;
                 border-radius: 0.75rem;
@@ -435,7 +434,7 @@ import { CommonModule } from '@angular/common';
                 <div id="welcome">
                     <h1>
                         <span> Hello there, </span>
-                        Welcome viva-acadamey 👋
+                        Welcome viva-academy-admin 👋
                     </h1>
                 </div>
 
@@ -845,6 +844,4 @@ nx affected:e2e</pre>
     styles: [],
     encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent {
-    newSrc = '';
-}
+export class NxWelcomeComponent {}

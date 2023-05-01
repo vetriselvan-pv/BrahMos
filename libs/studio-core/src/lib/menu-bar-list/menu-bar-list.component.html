@@ -1,0 +1,16 @@
+<!-- <div cdkDropList [cdkDropListData]="optionlist" class="menu-list-wrapper" cdkDropListSortingDisabled
+  [cdkDropListEnterPredicate]="noReturnPredicate" >
+  <div cdkDrag (cdkDragReleased)="entered($event)" (cdkDragStarted)="exited($event)" [cdkDragData]="option"
+    *ngFor="let option of optionlist">
+    <img class="menu-icon" [src]="option.icon" [alt]="option.placeholder">
+  </div>
+  <img  *ngIf="transferringItem?.tagName" [src]="transferringItem?.icon" [alt]="transferringItem?.placeholder">
+</div>
+  -->
+<div class="menu-list-wrapper">
+  <div cdkDrag  (cdkDragReleased)="entered()" (cdkDragStarted)="exited($event)" [cdkDragData]="option"
+    *ngFor="let option of optionlist">
+    <img class="menu-icon" [src]="option.icon" [alt]="option.placeholder">
+  </div>
+  <img *ngIf="transferringItem?.tagName" [src]="transferringItem?.icon" [alt]="transferringItem?.placeholder">
+</div>

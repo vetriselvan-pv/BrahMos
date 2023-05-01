@@ -1,0 +1,36 @@
+<!-- Div  -->
+<ng-template #div [dbDynamicTemplate]="'div'" let-index let-option>
+  <div class="default-div" [cdkDropListData]="childData" (cdkDropListDropped)="drop($any($event))" cdkDropList>
+    <ng-container *ngFor="let item of childData">
+      <div [cdkDragData]="item" cdkDrag>
+        <ng-container [ngTemplateOutlet]="getTemplate(item.tagName)"
+          [ngTemplateOutletContext]="{ $implicit : item }"></ng-container>
+      </div>
+    </ng-container>
+  </div>
+  <db-element></db-element>
+</ng-template>
+<!-- h1  -->
+<ng-template #h1 [dbDynamicTemplate]="'h1'" let-option>
+  <h1 [ngClass]="option.cssClass" [innerHTML]="option.value"></h1>
+</ng-template>
+<!-- h2  -->
+<ng-template #h2 [dbDynamicTemplate]="'h2'" let-option>
+  <h2 [ngClass]="option.cssClass" [innerHTML]="option.value"></h2>
+</ng-template>
+<!-- h3 -->
+<ng-template #h3 [dbDynamicTemplate]="'h3'" let-option>
+  <h3 [ngClass]="option.cssClass" [innerHTML]="option.value"></h3>
+</ng-template>
+<!-- h4 -->
+<ng-template #h4 [dbDynamicTemplate]="'h4'" let-option>
+  <h4 [ngClass]="option.cssClass" [innerHTML]="option.value"></h4>
+</ng-template>
+<!-- h5 -->
+<ng-template #h5 [dbDynamicTemplate]="'h5'" let-option>
+  <h5 [ngClass]="option.cssClass" [innerHTML]="option.value"></h5>
+</ng-template>
+<!-- h6 -->
+<ng-template #h6 [dbDynamicTemplate]="'h6'" let-option>
+  <h6 [ngClass]="option.cssClass" [innerHTML]="option.value"></h6>
+</ng-template>

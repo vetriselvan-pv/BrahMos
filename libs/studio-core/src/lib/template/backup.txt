@@ -1,0 +1,104 @@
+<ng-container *ngIf="item">
+  <ng-container [ngSwitch]="item.tagName">
+    <!-- Div  -->
+    <ng-container *ngSwitchCase="'div'">
+      <div cdkDropList class="default-div" cdkDrag >
+        <ng-container *ngFor="let childItem of item.child; let i = index">
+          <div>
+            <db-template [item]="childItem"></db-template>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+    <!-- h1  -->
+    <ng-container *ngSwitchCase="'h1'">
+      <h1 [ngClass]="item.cssClass" [innerHTML]="'Heading 1'"></h1>
+    </ng-container>
+    <!-- h2  -->
+    <ng-container *ngSwitchCase="'h2'">
+      <h2 [ngClass]="item.cssClass" [innerHTML]="item.value"></h2>
+    </ng-container>
+    <!-- h3 -->
+    <ng-container *ngSwitchCase="'h3'">
+      <h3 [ngClass]="item.cssClass" [innerHTML]="item.value"></h3>
+    </ng-container>
+    <!-- h4 -->
+    <ng-container *ngSwitchCase="'h4'">
+      <h4 [ngClass]="item.cssClass" [innerHTML]="item.value"></h4>
+    </ng-container>
+    <!-- h5 -->
+    <ng-container *ngSwitchCase="'h5'">
+      <h5 [ngClass]="item.cssClass" [innerHTML]="item.value"></h5>
+    </ng-container>
+    <!-- h6 -->
+    <ng-container *ngSwitchCase="'h6'">
+      <h6 [ngClass]="item.cssClass" [innerHTML]="item.value"></h6>
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+
+
+<!-- template based but child is not possible -->
+<!-- <mat-card [cdkDropListData]="boardData" (cdkDropListDropped)="drop($any($event))" cdkDropList #doneList="cdkDropList"
+  class="studio-board-container">
+  <ng-container *ngFor="let item of boardData">
+    <div cdkDropListGroup cdkDrag [cdkDragData]="item" >
+      <ng-container [ngTemplateOutlet]="getTemplate(item.tagName)"
+        [ngTemplateOutletContext]="{ $implicit : item }"></ng-container>
+    </div>
+  </ng-container>
+</mat-card>
+<db-element></db-element> -->
+
+
+<!-- switch case based -->
+<mat-card cdkDropList [id]="'0'" [cdkDropListConnectedTo]="_dynamicTemplateService.dragConnectedTo"
+  [cdkDropListData]="boardData.child" (cdkDropListDropped)="drop($any($event))" class="studio-board-container">
+  <ng-container *ngFor="let item of boardData.child; let index = index">
+    <db-template (itemDrop)="drop($any($event))" [item]="item"></db-template>
+  </ng-container>
+</mat-card>
+
+
+
+
+<ng-container *ngIf="item">
+  <ng-container [ngSwitch]="item.tagName">
+    <!-- Div  -->
+    <ng-container *ngSwitchCase="'div'">
+      <div cdkDrag [cdkDragData]="item" cdkDropList [id]="id" [cdkDropListData]="item.child"
+        [cdkDropListConnectedTo]="_templateService.dragConnectedTo" (cdkDropListDropped)="onDragDrop($any($event))">
+        <div  class="default-div">
+          <ng-container *ngFor="let nextItem of item.child">
+            <db-template (itemDrop)="onDragDrop($any($event))" [item]="nextItem" ></db-template>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+    <!-- h1  -->
+    <ng-container *ngSwitchCase="'h1'">
+      <h1 cdkDrag [ngClass]="item.cssClass" [innerHTML]="'Heading 1'"></h1>
+    </ng-container>
+    <!-- h2  -->
+    <ng-container *ngSwitchCase="'h2'">
+      <h2 cdkDrag [ngClass]="item.cssClass" [innerHTML]="item.value"></h2>
+    </ng-container>
+    <!-- h3 -->
+    <ng-container *ngSwitchCase="'h3'">
+      <h3 cdkDrag [ngClass]="item.cssClass" [innerHTML]="item.value"></h3>
+    </ng-container>
+    <!-- h4 -->
+    <ng-container *ngSwitchCase="'h4'">
+      <h4 cdkDrag [ngClass]="item.cssClass" [innerHTML]="item.value"></h4>
+    </ng-container>
+    <!-- h5 -->
+    <ng-container *ngSwitchCase="'h5'">
+      <h5 cdkDrag [ngClass]="item.cssClass" [innerHTML]="item.value"></h5>
+    </ng-container>
+    <!-- h6 -->
+    <ng-container *ngSwitchCase="'h6'">
+      <h6 cdkDrag [ngClass]="item.cssClass" [innerHTML]="item.value"></h6>
+    </ng-container>
+  </ng-container>
+</ng-container>

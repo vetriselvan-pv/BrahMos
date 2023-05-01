@@ -1,0 +1,58 @@
+*,
+*:after,
+*:before {
+    box-sizing: content-box;
+}
+
+.db-droppable {
+    background-color: #f0f0f0;
+    display: inline-block;
+    border-radius: 4px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.db-droppable:after {
+    content: '';
+    display: block;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.db-draggable {
+    display: flex;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.js-db-droppable--target:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-width: 2px;
+    z-index: 5;
+    border-style: dashed;
+}
+.js-db-droppable--zone:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-width: 2px;
+    border-style: dashed;
+}
+
+.js-db-droppable--target:after {
+    border-color: #b6faff;
+    background-color: #f0feff;
+}
+
+.js-db-droppable--zone:after {
+    border-color: #85ca7f;
+    background-color: #ebffe8;
+    opacity: 0.5;
+}

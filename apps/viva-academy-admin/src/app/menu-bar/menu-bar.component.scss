@@ -1,0 +1,22 @@
+@use '../../scss/theme' as *;
+
+.menu-container {
+    width: 265px;
+    height: 100%;
+    background-color: $primary_bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+    height: 100vh;
+    .menu-logo {
+        margin-bottom: 16px;
+    }
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+    }
+}

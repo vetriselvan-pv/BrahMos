@@ -1,0 +1,7 @@
+<ng-container *ngIf="menu">
+  <div class="menu-list-wrapper">
+    <img [src]="menu.icon" [alt]="menu.title">
+    <span [innerHTML]="menu.title"></span>
+    <brahmos-menu-bar-list [menu]="menu.child"></brahmos-menu-bar-list>
+  </div>
+</ng-container>

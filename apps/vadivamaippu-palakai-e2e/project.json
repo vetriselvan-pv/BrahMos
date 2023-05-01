@@ -1,0 +1,32 @@
+{
+    "name": "vadivamaippu-palakai-e2e",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/vadivamaippu-palakai-e2e/src",
+    "projectType": "application",
+    "targets": {
+        "e2e": {
+            "executor": "@nrwl/cypress:cypress",
+            "options": {
+                "cypressConfig": "apps/vadivamaippu-palakai-e2e/cypress.config.ts",
+                "devServerTarget": "vadivamaippu-palakai:serve:development",
+                "testingType": "e2e"
+            },
+            "configurations": {
+                "production": {
+                    "devServerTarget": "vadivamaippu-palakai:serve:production"
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "apps/vadivamaippu-palakai-e2e/**/*.{js,ts}"
+                ]
+            }
+        }
+    },
+    "tags": [],
+    "implicitDependencies": ["vadivamaippu-palakai"]
+}

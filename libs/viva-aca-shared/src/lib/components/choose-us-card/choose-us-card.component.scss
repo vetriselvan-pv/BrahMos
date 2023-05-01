@@ -1,0 +1,20 @@
+.choose-us-cards {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .choose-us-card {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 16px;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.studio-container {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    height: 100%;
+    width: 100%;
+    .studio-menu {
+        width: 22%;
+    }
+    .studio-board {
+        width: 78%;
+    }
+}
