@@ -1,0 +1,15 @@
+@use '.././../styles.scss' as *;
+
+.viva-footer {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary_bg;
+    padding: 16px;
+    .footer-content {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+}

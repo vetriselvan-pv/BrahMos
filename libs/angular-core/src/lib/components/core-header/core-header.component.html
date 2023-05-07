@@ -1,0 +1,34 @@
+<ng-container *ngIf="headerConfig">
+    <div class="core-header-wrapper">
+        <ng-container *ngIf="headerConfig.logoPath">
+            <img [src]="headerConfig.logoPath" [alt]="headerConfig.title" />
+        </ng-container>
+        <span class="core-header__title" [innerHTML]="headerConfig.title">
+        </span>
+        <div class="core-header-menu">
+            <ng-container *ngFor="let menuList of headerConfig.headerMenu">
+                <div class="header-menu__option">
+                    <span
+                        class="menu--option__title"
+                        [innerHTML]="menuList.title"
+                    >
+                    </span>
+                </div>
+            </ng-container>
+        </div>
+        <div class="core-header-options">
+            <ng-container *ngFor="let optionList of headerConfig.headerOptions">
+              <div class="header-menu__option">
+                <span
+                    class="menu--option__title"
+                    [innerHTML]="optionList.title"
+                >
+                </span>
+                <ng-container *ngIf="optionList.iconPath">
+                  <img [src]="optionList.iconPath" [alt]="optionList.title" />
+              </ng-container>
+            </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>

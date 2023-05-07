@@ -1,0 +1,8 @@
+@use '../../scss/theme' as *;
+
+.menu-list-wrapper {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}

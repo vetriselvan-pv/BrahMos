@@ -1,0 +1,13 @@
+.default-div {
+    width: 100%;
+    padding: 8px;
+    height: 40px;
+    border: 1px solid #ddd;
+}
+
+.drop-placeholder {
+    background: #ccc;
+    border: dotted 3px #999;
+    min-height: 60px;
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

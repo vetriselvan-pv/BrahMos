@@ -1,0 +1,5 @@
+<div class="menu-list-wrapper">
+  <div  [dbDraggable]="option" [id]="option.tagName" *ngFor="let option of optionlist">
+    <img class="menu-icon" [src]="option.icon" [alt]="option.placeholder">
+  </div>
+</div>

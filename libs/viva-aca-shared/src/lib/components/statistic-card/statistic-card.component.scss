@@ -1,0 +1,15 @@
+@use '../../../../../../apps/viva-acadamey/src/styles.scss' as *;
+
+.viva-statistic-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    background-color: $primary_bg;
+    .viva-statistic-content {
+        border-right: 1px solid $swatch_5;
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 8px;
+    }
+}
