@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { DragService } from '../zone-service/drag.service';
-import { IDroppableEventObject } from '../zone-service/dropable.directive';
 import { IBoardData } from '@brahmos/studio-modal';
+import { DragService } from '../../services/drag.service';
+import { IDroppableEventObject } from '../../directives/dropable.directive';
+import { Store } from '@ngxs/store';
+import { AddElement, IStudioTree } from '../../state';
 
 @Component({
     selector: 'db-studio-board',
@@ -14,7 +16,7 @@ export class DBStudioBoardComponent {
     public droppableObjects: Array<IBoardData> = [];
     public draggableObjects: Array<Array<IBoardData>> = [[], [], []];
 
-    constructor(protected dragService: DragService) {}
+    constructor(protected dragService: DragService, private _store: Store) {}
 
     /**
      * @desc responsible for generating the zones that a draggable element can go too.
@@ -35,6 +37,18 @@ export class DBStudioBoardComponent {
     onDrop(e: IDroppableEventObject) {
         console.log(e);
         this.droppableObjects.push(e.data);
+        const data: IStudioTree = {
+            child: e.data.child,
+            cssClass: e.data.cssClass,
+            tagName: e.data.tagName,
+            defaultValue: '',
+            id: e.data.id,
+            forName: e.data.forName,
+            icon: '',
+            hoverText: '',
+            placeholder: '',
+        };
+        this._store.dispatch(new AddElement(data, -1));
     }
 
     dragOver(event: Event) {

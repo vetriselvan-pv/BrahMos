@@ -18,6 +18,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Text Box',
                     tagName: 'textbox',
                     zones: ['dbZone'],
+                    defaultValue: 'break',
+                    child: [],
                 },
                 {
                     hoverText: 'Checkbox',
@@ -25,6 +27,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Checkbox',
                     tagName: 'checkbox',
                     zones: ['dbZone'],
+                    defaultValue: 'break',
+                    child: [],
                 },
                 {
                     hoverText: 'Number',
@@ -32,6 +36,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Number',
                     tagName: 'number',
                     zones: ['dbZone'],
+                    defaultValue: 'break',
+                    child: [],
                 },
                 {
                     hoverText: 'Password',
@@ -39,6 +45,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Password',
                     tagName: 'password',
                     zones: ['dbZone'],
+                    defaultValue: 'break',
+                    child: [],
                 },
                 {
                     hoverText: 'Email',
@@ -46,6 +54,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Email',
                     tagName: 'email',
                     zones: ['dbZone'],
+                    defaultValue: 'break',
+                    child: [],
                 },
                 {
                     hoverText: 'Color',
@@ -53,6 +63,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Color',
                     tagName: 'color',
                     zones: ['dbZone'],
+                    defaultValue: 'break',
+                    child: [],
                 },
             ],
         },
@@ -65,6 +77,7 @@ export class DBMenuBarComponent {
                     placeholder: 'Div',
                     tagName: 'div',
                     zones: ['dbZone'],
+                    defaultValue: 'div',
                     child: [],
                 },
                 {
@@ -73,6 +86,8 @@ export class DBMenuBarComponent {
                     placeholder: 'H1',
                     tagName: 'h1',
                     zones: ['dbZone'],
+                    defaultValue: 'Heading 1',
+                    child: [],
                 },
                 {
                     hoverText: 'Heading 2',
@@ -80,6 +95,8 @@ export class DBMenuBarComponent {
                     placeholder: 'H2',
                     tagName: 'h2',
                     zones: ['dbZone'],
+                    defaultValue: 'Heading 2',
+                    child: [],
                 },
                 {
                     hoverText: 'Heading 3',
@@ -87,6 +104,8 @@ export class DBMenuBarComponent {
                     placeholder: 'H3',
                     tagName: 'h3',
                     zones: ['dbZone'],
+                    defaultValue: 'Heading 3',
+                    child: [],
                 },
                 {
                     hoverText: 'Heading 4',
@@ -94,6 +113,8 @@ export class DBMenuBarComponent {
                     placeholder: 'H4',
                     tagName: 'h4',
                     zones: ['dbZone'],
+                    defaultValue: 'Heading 4',
+                    child: [],
                 },
                 {
                     hoverText: 'Heading 5',
@@ -101,6 +122,8 @@ export class DBMenuBarComponent {
                     placeholder: 'H5',
                     tagName: 'h5',
                     zones: ['dbZone'],
+                    defaultValue: 'Heading 5',
+                    child: [],
                 },
                 {
                     hoverText: 'Heading 6',
@@ -108,6 +131,8 @@ export class DBMenuBarComponent {
                     placeholder: 'H6',
                     tagName: 'h6',
                     zones: ['dbZone'],
+                    defaultValue: 'Heading 6',
+                    child: [],
                 },
                 {
                     hoverText: 'Span',
@@ -115,6 +140,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Span',
                     tagName: 'span',
                     zones: ['dbZone'],
+                    defaultValue: 'span',
+                    child: [],
                 },
                 {
                     hoverText: 'Paragraph',
@@ -122,6 +149,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Paragraph',
                     tagName: 'paragraph',
                     zones: ['dbZone'],
+                    child: [],
+                    defaultValue: 'paragraph',
                 },
                 {
                     hoverText: 'Break',
@@ -129,6 +158,8 @@ export class DBMenuBarComponent {
                     placeholder: 'Break',
                     tagName: 'break',
                     zones: ['dbZone'],
+                    child: [],
+                    defaultValue: 'break',
                 },
                 // {
                 //   hoverText : 'List',

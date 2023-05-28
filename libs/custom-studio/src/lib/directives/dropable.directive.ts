@@ -9,7 +9,7 @@ import {
     Output,
     Renderer2,
 } from '@angular/core';
-import { DragService } from './drag.service';
+import { DragService } from '../services/drag.service';
 import { IBoardData } from '@brahmos/studio-modal';
 
 // 1

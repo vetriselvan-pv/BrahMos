@@ -1,14 +1,17 @@
 export interface IBoardData {
     selector?: string;
     tagName: tagType;
+    id?: string;
     icon: string;
     hoverText: string;
     placeholder: string;
     cssClass?: string[];
+    defaultValue: string;
     value?: unknown;
-    child?: IBoardData[];
+    child: IBoardData[];
     uId?: string;
     zones: Array<string>;
+    forName?: string;
 }
 
 export interface IMenuList {

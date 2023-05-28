@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IBoardData } from '@brahmos/studio-modal';
-import { IDroppableEventObject } from '../zone-service/dropable.directive';
+import { IDroppableEventObject } from '../..//directives/dropable.directive';
 
 @Component({
     selector: 'db-template',
@@ -11,7 +11,7 @@ export class DBTemplateComponent {
     @Input() item!: IBoardData;
     id = '';
 
-    onDrog(event: IDroppableEventObject) {
+    onDrop(event: IDroppableEventObject) {
         event.event.preventDefault();
         event.event.stopPropagation();
         console.log('child', event);

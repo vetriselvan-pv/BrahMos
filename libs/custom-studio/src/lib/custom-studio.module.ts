@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DBMenuBarComponent } from './menu-bar/menu-bar.component';
+import { DBMenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
-import { DBMenuBarListComponent } from './menu-bar-list/menu-bar-list.component';
-import { DBStudioBoardComponent } from './studio-board/studio-board.component';
-import { DBStudioContainerComponent } from './studio-container/studio-container.component';
-import { DBTemplateComponent } from './template/template.component';
+import { DBMenuBarListComponent } from './components/menu-bar-list/menu-bar-list.component';
+import { DBStudioBoardComponent } from './components/studio-board/studio-board.component';
+import { DBStudioContainerComponent } from './components/studio-container/studio-container.component';
+import { DBTemplateComponent } from './components/template/template.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './custom-studio.routes';
-import { DBDroppableDirective } from './zone-service/dropable.directive';
-import { DBDraggableDirective } from './zone-service/dragable.directive';
-import { DragService } from './zone-service/drag.service';
+import { DBDroppableDirective } from './directives/dropable.directive';
+import { DBDraggableDirective } from './directives/dragable.directive';
+import { DragService } from './services/drag.service';
 
 @NgModule({
     imports: [
