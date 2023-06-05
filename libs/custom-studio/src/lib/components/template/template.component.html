@@ -3,10 +3,10 @@
     <!-- Div  -->
     <ng-container *ngSwitchCase="'div'">
       <div [dbDraggable]="item"   class="default-div">
-        <ng-container *ngFor="let nextItem of item.child">
-          <db-template [item]="nextItem"></db-template>
+        <ng-container *ngFor="let nextItem of item.child; let childIndex = index">
+          <db-template [parentId]="parentId+'_'+childIndex" [item]="nextItem"></db-template>
         </ng-container>
-        <div [dbDroppable]="{ zone : 'dbZone' }" (droppableComplete)="onDrop($event)" class="dropable-area">
+        <div [dbDroppable]="{ zone : 'dbZone' }" (droppableComplete)="onDrop($event,item.child.length)" class="dropable-area">
 
         </div>
       </div>

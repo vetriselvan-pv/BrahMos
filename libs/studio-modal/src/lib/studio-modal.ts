@@ -12,6 +12,7 @@ export interface IBoardData {
     uId?: string;
     zones: Array<string>;
     forName?: string;
+    parentId: string;
 }
 
 export interface IMenuList {

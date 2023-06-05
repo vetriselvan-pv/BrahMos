@@ -47,6 +47,7 @@ export class DBStudioBoardComponent {
             icon: '',
             hoverText: '',
             placeholder: '',
+            parentId: `parent_${this.droppableObjects.length - 1}`,
         };
         this._store.dispatch(new AddElement(data, -1));
     }

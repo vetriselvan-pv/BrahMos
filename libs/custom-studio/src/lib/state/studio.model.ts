@@ -13,8 +13,15 @@ export interface IStudioTree {
     hoverText?: string;
     placeholder?: string;
     uId?: string;
+    parentId: string;
 }
 
 export interface IStudio {
     parent: IStudioTree[];
 }
+
+export interface IChildFn {
+    (data: IStudioTree[], payload: unknown, args: Array<string>): void;
+}
+
+export type ElementProps = keyof IStudioTree;
