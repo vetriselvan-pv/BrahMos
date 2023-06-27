@@ -15,6 +15,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
+            "@brahmos/add-schematic": ["libs/add-schematic/src/index.ts"],
             "@brahmos/angular-core": ["libs/angular-core/src/index.ts"],
             "@brahmos/custom-studio": ["libs/custom-studio/src/index.ts"],
             "@brahmos/shared-directives": [
