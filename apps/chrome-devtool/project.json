@@ -1,0 +1,100 @@
+{
+    "name": "chrome-devtool",
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "sourceRoot": "apps/chrome-devtool/src",
+    "prefix": "brahmos",
+    "targets": {
+        "build": {
+            "executor": "@angular-devkit/build-angular:browser",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/chrome-devtool",
+                "index": "apps/chrome-devtool/src/index.html",
+                "main": "apps/chrome-devtool/src/main.ts",
+                "polyfills": ["zone.js"],
+                "tsConfig": "apps/chrome-devtool/tsconfig.app.json",
+                "inlineStyleLanguage": "scss",
+                "assets": [
+                    "apps/chrome-devtool/src/favicon.ico",
+                    "apps/chrome-devtool/src/assets",
+                    "apps/chrome-devtool/src/manifest.json",
+                    "apps/chrome-devtool/src/devtools.html",
+                    "apps/chrome-devtool/src/devtools.js",
+                    "apps/chrome-devtool/src/service_worker.js"
+                ],
+                "styles": ["apps/chrome-devtool/src/styles.scss"],
+                "scripts": []
+            },
+            "configurations": {
+                "production": {
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "500kb",
+                            "maximumError": "1mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "2kb",
+                            "maximumError": "4kb"
+                        }
+                    ],
+                    "outputHashing": "all"
+                },
+                "development": {
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "vendorChunk": true,
+                    "extractLicenses": false,
+                    "sourceMap": true,
+                    "namedChunks": true
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "serve": {
+            "executor": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+                "production": {
+                    "browserTarget": "chrome-devtool:build:production"
+                },
+                "development": {
+                    "browserTarget": "chrome-devtool:build:development"
+                }
+            },
+            "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+                "browserTarget": "chrome-devtool:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "apps/chrome-devtool/**/*.ts",
+                    "apps/chrome-devtool/**/*.html"
+                ]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "apps/chrome-devtool/jest.config.ts",
+                "passWithNoTests": true
+            },
+            "configurations": {
+                "ci": {
+                    "ci": true,
+                    "codeCoverage": true
+                }
+            }
+        }
+    },
+    "tags": []
+}
