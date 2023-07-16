@@ -17,6 +17,7 @@
         "paths": {
             "@brahmos/angular-core": ["libs/angular-core/src/index.ts"],
             "@brahmos/custom-studio": ["libs/custom-studio/src/index.ts"],
+            "@brahmos/d3-js": ["libs/d3-js/src/index.ts"],
             "@brahmos/shared-directives": [
                 "libs/shared-directives/src/index.ts"
             ],
