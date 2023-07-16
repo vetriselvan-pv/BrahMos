@@ -21,9 +21,9 @@
 
 .db-draggable {
     display: flex;
-    background-color: white;
+    // background-color: white;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .js-db-droppable--target:after {
@@ -55,4 +55,11 @@
     border-color: #85ca7f;
     background-color: #ebffe8;
     opacity: 0.5;
+}
+
+.dropable-area {
+    border: 1px dashed #12b76a;
+    width: 100%;
+    height: 30px;
+    margin-top: 16px;
 }

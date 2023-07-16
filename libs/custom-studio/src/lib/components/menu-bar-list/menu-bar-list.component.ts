@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IBoardData } from '@brahmos/studio-modal';
-import { DragService } from '../zone-service/drag.service';
+import { DragService } from '../../services/drag.service';
 
 @Component({
     selector: 'db-menu-bar-list',
