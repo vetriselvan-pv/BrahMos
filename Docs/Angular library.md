@@ -6,4 +6,4 @@
 
 `nx g @nx/angular:component <component-name> --project=<project-name>`
 
--   To find the project name open the package.json of respective library <b> <i>name </i></b> is the project name.
+-   To find the project name open the project.json of respective library <b> <i>name </i></b> is the project name.

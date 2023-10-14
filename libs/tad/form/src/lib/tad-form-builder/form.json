@@ -1,0 +1,20 @@
+{
+    "loginForm": {
+        "title": "",
+        "formType": "group | array",
+        "syncValidtor": "",
+        "asyncValidator": "",
+        "isDefaultDisable": "boolean",
+        "control": [
+            {
+                "controlName": "",
+                "updateOn": "blur | change ",
+                "syncValidtor": "",
+                "asyncValidator": "",
+                "defaultValue": "",
+                "controlInterface": "string | boolean | object | number | date ",
+                "controlType": "textbox | checkbox | textArea | datePicker | radioButton | slider | amountBox | dropdown | searchableDropdown | multiSelwctDropdown "
+            }
+        ]
+    }
+}
