@@ -1,0 +1,85 @@
+@function toRem($value) {
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
+}
+
+@mixin flexSpace() {
+    display: flex;
+    justify-content: space-between;
+}
+
+$defaultPadding: toRem(16);
+$defaultMargin: toRem(16);
+$zeroPadding: toRem(0);
+$zeroMargin: toRem(0);
+
+$primary: #4a7;
+$primary300: #b4daa7;
+
+h1 {
+    color: #111827;
+    font-family: Inter;
+    font-size: toRem(60);
+    font-style: normal;
+    font-weight: 700;
+    line-height: toRem(72);
+    letter-spacing: toRem(-1.2);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: #4b5563;
+    font-family: Inter;
+    font-size: toRem(16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: toRem(24);
+    padding: 0;
+    margin: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.fd-column {
+    flex-direction: column;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.g-8 {
+    gap: toRem(8);
+}
+
+.g-16 {
+    gap: toRem(16);
+}
+
+.g-24 {
+    gap: toRem(24);
+}
+
+h3 {
+    color: #111827;
+    text-align: center;
+    font-family: Inter;
+    font-size: toRem(36);
+    font-style: normal;
+    font-weight: 600;
+    line-height: toRem(40);
+    letter-spacing: toRem(-0.72);
+    margin: 0;
+    padding: 0;
+}

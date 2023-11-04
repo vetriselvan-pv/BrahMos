@@ -1,0 +1,55 @@
+@use '../../scss/variable' as *;
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(48);
+    align-items: center;
+
+    p {
+        text-align: center;
+    }
+
+    .experience {
+        display: flex;
+        gap: toRem(48);
+        width: toRem(896);
+        padding: toRem(32);
+        align-items: flex-start;
+        border-radius: toRem(12);
+        background: #fff;
+        box-shadow: 0px toRem(2) toRem(2) toRem(0) rgba(0, 0, 0, 0.06),
+            0px toRem(4) toRem(3) 0px rgba(0, 0, 0, 0.07);
+
+        .company {
+            max-width: toRem(206);
+        }
+
+        .detail {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: flex-start;
+            gap: 16px;
+
+            h6 {
+                color: #111827;
+                font-family: Inter;
+                font-size: toRem(20);
+                font-style: normal;
+                font-weight: 600;
+                line-height: toRem(28);
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        ul {
+            margin: 0px;
+        }
+
+        .duration {
+            max-width: toRem(146);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@use '../../scss/variable' as *;
+
+.online {
+    width: toRem(8);
+    height: toRem(8);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #10b981;
+    display: inline-block;
+}
+
+.profile {
+    width: toRem(280);
+    height: toRem(320);
+    flex-shrink: 0;
+}

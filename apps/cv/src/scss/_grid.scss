@@ -1,0 +1,43 @@
+@use 'sass:math';
+
+// breakpoints map
+$breakpoints: (
+    xs: 32rem,
+    sm: 48rem,
+    md: 72rem,
+    lg: 96rem,
+    xl: 102rem,
+    xx: 120rem,
+);
+
+// media query mixin
+@mixin break($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+// number of columns variable
+$items: 12;
+
+// grid container
+.grid,
+.entry-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-self: stretch;
+}
+
+// loop over the breakpoints
+@each $key, $value in $breakpoints {
+    @for $i from 1 through $items {
+        .col-#{$key}-#{$i} {
+            box-sizing: border-box;
+            @include break($key) {
+                flex: 0 0 (math.div($i, $items) * 100%);
+            }
+        }
+    }
+}
