@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(245, 71, 72, 0.06) 0%,
+        rgba(245, 71, 72, 0) 100%
+    );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+span {
+    color: #2a435d;
+}
+
+@font-face {
+    font-family: dance;
+    src: url(./assets/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}

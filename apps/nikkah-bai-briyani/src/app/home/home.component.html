@@ -1,8 +1,25 @@
-<div class="wrapper">
+<div class="home-wrapper">
   <div class="banner">
-
+      <span>Today <span class="banner-highlight">Special</span> offer</span>
   </div>
-  <div class="footer">
-
+  <div class="content">
+    <ng-container *ngFor="let item of foodList">
+      <div class="food-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" fill="none">
+          <circle cx="125.035" cy="124.965" r="116.153" transform="rotate(178.687 125.035 124.965)" stroke="url(#paint0_linear_102_154)" stroke-width="16"/>
+          <defs>
+            <linearGradient id="paint0_linear_102_154" x1="131.787" y1="144.132" x2="131.787" y2="280.047" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F54748" stop-opacity="0"/>
+              <stop offset="1" stop-color="#FDC55E"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <img class="food-img" width="198px" height="198px" src="./assets/background-image/chicken-briyani.jpeg" alt="">
+        <div class="food-details">
+          <span class="food-details_title">{{ item.title }}</span>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>

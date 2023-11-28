@@ -8,4 +8,19 @@ import { CommonModule } from '@angular/common';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {}
+export class HomeComponent {
+    foodList: Array<any> = [
+        {
+            title: 'chicken briyani',
+        },
+        {
+            title: 'chicken briyani',
+        },
+        {
+            title: 'chicken briyani',
+        },
+        {
+            title: 'chicken briyani',
+        },
+    ];
+}
