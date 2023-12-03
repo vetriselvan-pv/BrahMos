@@ -1,0 +1,20 @@
+@use '../../scss/variable' as *;
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: toRem(48);
+    .detail {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: toRem(16);
+        .communication {
+            display: flex;
+            align-items: center;
+            gap: toRem(20);
+        }
+    }
+}

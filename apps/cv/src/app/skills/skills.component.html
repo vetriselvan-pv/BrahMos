@@ -1,0 +1,11 @@
+<div class="skill-container">
+  <p>The skills, tools and technologies I am really good at:</p>
+  <div class="grid skill-group">
+    <ng-container *ngFor="let skill of skillList">
+      <div class="skill col-md-2 col-sm-4 col-xs-4">
+        <img [src]="skill.icon | safe : 'resourceUrl' " width="64" height="64" [alt]="skill.title">
+        <span [innerText]="skill.title" ></span>
+      </div>
+    </ng-container>
+  </div>
+</div>

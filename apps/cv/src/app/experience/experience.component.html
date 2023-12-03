@@ -1,0 +1,21 @@
+<div class="experience-container">
+  <p>Here is a quick summary of my most recent experiences:</p>
+    <ng-container *ngFor="let experience of experienceList">
+      <div class="experience">
+        <div class="company">
+          <p>{{experience.companyName}}</p>
+        </div>
+        <div class="detail">
+          <h6>{{ experience.role }}</h6>
+            <ul>
+              <ng-container *ngFor="let res of experience.responsibility">
+                <li>{{ res }}</li>
+              </ng-container>
+            </ul>
+        </div>
+        <div class="duration">
+          <p>{{experience.duration}}</p>
+        </div>
+      </div>
+    </ng-container>
+</div>
