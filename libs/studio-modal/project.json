@@ -11,7 +11,8 @@
                 "outputPath": "dist/libs/studio-modal",
                 "main": "libs/studio-modal/src/index.ts",
                 "tsConfig": "libs/studio-modal/tsconfig.lib.json",
-                "assets": ["libs/studio-modal/*.md"]
+                "assets": ["libs/studio-modal/*.md"],
+                "updateBuildableProjectDepsInPackageJson": true
             }
         },
         "lint": {

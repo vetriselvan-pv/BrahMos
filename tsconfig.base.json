@@ -27,12 +27,12 @@
             "@brahmos/studio-modal": ["libs/studio-modal/src/index.ts"],
             "@brahmos/t": ["libs/t/src/index.ts"],
             "@brahmos/tad/core": ["libs/tad/core/src/index.ts"],
-            "@brahmos/viva-aca-shared": ["libs/viva-aca-shared/src/index.ts"],
-            "@tad/form": ["libs/tad/form/src/index.ts"],
-            "@tad/grid": ["libs/tad/grid/src/index.ts"],
             "@brahmos/tad/form-components": [
                 "libs/tad/form-components/src/index.ts"
-            ]
+            ],
+            "@brahmos/viva-aca-shared": ["libs/viva-aca-shared/src/index.ts"],
+            "@tad/form": ["libs/tad/form/src/index.ts"],
+            "@tad/grid": ["libs/tad/grid/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

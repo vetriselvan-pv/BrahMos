@@ -9,7 +9,7 @@
         "tslib": "^2.3.0"
     },
     "sideEffects": false,
-    "exports" : {
-      "./grid.scss" : "./assets/scss/_grid.scss"
+    "exports": {
+        "./grid.scss": "./assets/scss/_grid.scss"
     }
 }

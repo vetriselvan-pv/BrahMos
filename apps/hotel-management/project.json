@@ -54,7 +54,7 @@
         },
         "test": {
             "executor": "@nrwl/vite:test",
-            "outputs": ["coverage/apps/hotel-management"],
+            "outputs": ["{workspaceRoot}/coverage/apps/hotel-management"],
             "options": {
                 "passWithNoTests": true,
                 "reportsDirectory": "../../coverage/apps/hotel-management"
