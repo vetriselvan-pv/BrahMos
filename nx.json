@@ -77,7 +77,7 @@
             "style": "scss",
             "linter": "eslint",
             "unitTestRunner": "jest",
-            "e2eTestRunner": "none"
+            "e2eTestRunner": "cypress"
         },
         "@nx/angular:library": {
             "linter": "eslint",
