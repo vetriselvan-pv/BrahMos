@@ -1,0 +1,99 @@
+/** Files container all the variable for scss and use throught out the project . Before making changes please consider it will change the entire project theme */
+
+/* primary color for the project   */
+$primary: #427d9d !default;
+$primaryFocused: #164863 !default;
+$primaryHover: #ddf2fd !default;
+$primarySelected: #9bbec8 !default;
+$primaryDisabled: #889092 !default;
+
+/* Form fields  */
+$warningBorder: #ffeac1 !default;
+$warningBg: #fffbf4 !default;
+$errorBg: #fff5f5 !default;
+$errorBorder: #ffd8d8 !default;
+
+/* Alert color */
+$warning: #ffb82e !default;
+$error: #f93232 !default;
+$success: #439f6e !default;
+
+/** Text color  */
+$textGrey: #8a8894 !default;
+$textBlack: #212121 !default;
+$textWhite: #fff !default;
+
+/* to define the class based on media querry */
+$breakpoints: (
+    sm: 'min-width : 320px and max-width : 640px',
+    md: 'min-width: 641px and max-width : 1280px',
+    lg: 'min-width : 1280px and max-width : 1920px',
+) !default;
+
+/* all media have 12 divisions only  */
+$colItems: 12 !default;
+
+/* heading and p css based on media*/
+$h1: (
+    sm-font-size: 24px,
+    sm-font-weight: 700,
+    sm-line-height: 28.8px,
+    md-font-size: 48px,
+    md-font-weight: 700,
+    md-line-height: 52.8px,
+    lg-font-size: 56px,
+    lg-font-weight: 700,
+    lg-line-height: 61.6px,
+);
+
+$h2: (
+    sm-font-size: 20px,
+    sm-font-weight: 700,
+    sm-line-height: 24px,
+    md-font-size: 32px,
+    md-font-weight: 700,
+    md-line-height: 38.4px,
+    lg-font-size: 48px,
+    lg-font-weight: 700,
+    lg-line-height: 57.6px,
+);
+
+$h3: (
+    sm-font-size: 18px,
+    sm-font-weight: 700,
+    sm-line-height: 21.6px,
+    md-font-size: 24px,
+    md-font-weight: 700,
+    md-line-height: 28.8px,
+    lg-font-size: 32px,
+    lg-font-weight: 700,
+    lg-line-height: 38.4px,
+);
+
+$h4: (
+    sm-font-size: 16px,
+    sm-font-weight: 700,
+    sm-line-height: 19.2px,
+    md-font-size: 18px,
+    md-font-weight: 700,
+    md-line-height: 21.6px,
+    lg-font-size: 48px,
+    lg-font-weight: 700,
+    lg-line-height: 57.6px,
+);
+
+$h5: (
+    sm-font-size: 14px,
+    sm-font-weight: 700,
+    sm-line-height: 16.8px,
+    md-font-size: 16px,
+    md-font-weight: 700,
+    md-line-height: 19.2px,
+    lg-font-size: 18px,
+    lg-font-weight: 700,
+    lg-line-height: 21.6px,
+);
+
+$btn-primary: (
+    sm-padding: 8px 24px,
+);
