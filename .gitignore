@@ -113,3 +113,5 @@ yarn-error.log
 apps/timeline-e2e/artifacts
 
 *package-lock.json
+
+.nx/cache

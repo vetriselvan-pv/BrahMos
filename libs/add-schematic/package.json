@@ -2,11 +2,11 @@
     "name": "@brahmos/add-schematic",
     "version": "0.0.1",
     "scripts": {
-      "build" : "tsc -p tsconfig.schematics.json",
-      "postbuild" : "copyfiles schematics/collection.json ../../dist/libs/add-schematic/"
+        "build": "tsc -p tsconfig.schematics.json",
+        "postbuild": "copyfiles schematics/collection.json ../../dist/libs/add-schematic/"
     },
-    "ng-add" : {
-      "save" : "true"
+    "ng-add": {
+        "save": "true"
     },
     "schematics": "./schematics/collection.json",
     "peerDependencies": {

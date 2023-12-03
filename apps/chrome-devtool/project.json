@@ -57,10 +57,10 @@
             "executor": "@angular-devkit/build-angular:dev-server",
             "configurations": {
                 "production": {
-                    "browserTarget": "chrome-devtool:build:production"
+                    "buildTarget": "chrome-devtool:build:production"
                 },
                 "development": {
-                    "browserTarget": "chrome-devtool:build:development"
+                    "buildTarget": "chrome-devtool:build:development"
                 }
             },
             "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-                "browserTarget": "chrome-devtool:build"
+                "buildTarget": "chrome-devtool:build"
             }
         },
         "lint": {

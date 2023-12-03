@@ -9,7 +9,8 @@
             "executor": "@nrwl/angular:ng-packagr-lite",
             "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
             "options": {
-                "project": "libs/add-schematic/ng-package.json"
+                "project": "libs/add-schematic/ng-package.json",
+                "updateBuildableProjectDepsInPackageJson": true
             },
             "configurations": {
                 "production": {

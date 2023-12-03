@@ -10,3 +10,5 @@ karma.conf.js
 commitlint.config.js
 
 .angular
+
+/.nx/cache
