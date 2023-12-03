@@ -124,6 +124,7 @@
         "@ngxs/storage-plugin": "^3.8.0",
         "@ngxs/store": "^3.8.0",
         "@ngxs/websocket-plugin": "^3.8.0",
+        "@tad/form-components": "file:dist/libs/tad/form-components/tad-form-components-0.0.1.tgz",
         "copyfiles": "^2.4.1",
         "d3": "^7.8.4",
         "husky": "^8.0.3",
