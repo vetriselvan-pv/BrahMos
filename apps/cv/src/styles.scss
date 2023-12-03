@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@use './scss/variable' as *;
+@use './scss/font' as *;
+@use './scss/grid' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9fafb;
+    overflow: hidden;
+    background: url('./assets/svg/background.svg'),
+        lightgray 0px 0px / 100% 100% no-repeat;
+}
+
+@media only screen and (max-width: 72rem) {
+    .router-container {
+        padding: 92px 80px;
+        overflow: scroll;
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-width: 96rem) {
+    .router-container {
+        padding: 92px 80px;
+        overflow: scroll;
+        height: 90vh;
+    }
+}
