@@ -1,0 +1,38 @@
+@use './variables' as var;
+
+/*
+* @description here we are setting the styles based on the screen width
+ */
+@each $key, $value in var.$breakpoints {
+    @media (#{$value}) {
+        h1 {
+            font-size: map-get(var.$h1, #{$key}-font-size);
+            font-weight: map-get(var.$h1, #{$key}-font-weight);
+            line-height: map-get(var.$h1, #{$key}-line-height);
+        }
+
+        h2 {
+            font-size: map-get(var.$h2, #{$key}-font-size);
+            font-weight: map-get(var.$h2, #{$key}-font-weight);
+            line-height: map-get(var.$h2, #{$key}-line-height);
+        }
+
+        h3 {
+            font-size: map-get(var.$h3, #{$key}-font-size);
+            font-weight: map-get(var.$h3, #{$key}-font-weight);
+            line-height: map-get(var.$h3, #{$key}-line-height);
+        }
+
+        h4 {
+            font-size: map-get(var.$h4, #{$key}-font-size);
+            font-weight: map-get(var.$h4, #{$key}-font-weight);
+            line-height: map-get(var.$h4, #{$key}-line-height);
+        }
+
+        h5 {
+            font-size: map-get(var.$h5, #{$key}-font-size);
+            font-weight: map-get(var.$h5, #{$key}-font-weight);
+            line-height: map-get(var.$h5, #{$key}-line-height);
+        }
+    }
+}

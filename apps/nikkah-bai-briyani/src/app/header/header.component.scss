@@ -1,0 +1,31 @@
+@use '../../variables' as *;
+
+.header-conatiner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-between;
+    padding: 24px 90px;
+
+    span {
+        @include header-text-style;
+    }
+
+    ul {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        flex: 1;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                @include header-text-style;
+                text-decoration: none;
+            }
+        }
+    }
+}
