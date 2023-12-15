@@ -1,11 +1,27 @@
 {
-    "name": "tad-core",
+    "name": "@tad/core",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/tad/core/src",
-    "prefix": "brahmos",
+    "prefix": "lib",
     "tags": [],
     "projectType": "library",
     "targets": {
+        "build": {
+            "executor": "@nx/angular:package",
+            "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+            "options": {
+                "project": "libs/tad/core/ng-package.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/tad/core/tsconfig.lib.prod.json"
+                },
+                "development": {
+                    "tsConfig": "libs/tad/core/tsconfig.lib.json"
+                }
+            },
+            "defaultConfiguration": "production"
+        },
         "test": {
             "executor": "@nx/jest:jest",
             "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
@@ -19,7 +35,8 @@
             "options": {
                 "lintFilePatterns": [
                     "libs/tad/core/**/*.ts",
-                    "libs/tad/core/**/*.html"
+                    "libs/tad/core/**/*.html",
+                    "libs/tad/core/package.json"
                 ]
             }
         }

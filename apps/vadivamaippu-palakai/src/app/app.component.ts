@@ -1,8 +1,9 @@
 import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
+import { SampleComponent } from '@tad/form-components';
 @Component({
     standalone: true,
-    imports: [RouterModule],
+    imports: [RouterModule, SampleComponent],
     selector: 'brahmos-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],

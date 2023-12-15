@@ -2,16 +2,15 @@
     "name": "@tad/form-components",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/tad/form-components/src",
-    "prefix": "brahmos",
+    "prefix": "tad",
     "tags": [],
     "projectType": "library",
     "targets": {
         "build": {
-            "executor": "@nx/angular:ng-packagr-lite",
+            "executor": "@nx/angular:package",
             "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
             "options": {
-                "project": "libs/tad/form-components/ng-package.json",
-                "updateBuildableProjectDepsInPackageJson": true
+                "project": "libs/tad/form-components/ng-package.json"
             },
             "configurations": {
                 "production": {
@@ -36,7 +35,8 @@
             "options": {
                 "lintFilePatterns": [
                     "libs/tad/form-components/**/*.ts",
-                    "libs/tad/form-components/**/*.html"
+                    "libs/tad/form-components/**/*.html",
+                    "libs/tad/core/package.json"
                 ]
             }
         }

@@ -17,7 +17,7 @@ import {
 } from '@angular/forms';
 
 @Component({
-    selector: 'brahmos-tad-form-builder',
+    selector: 'tad-form-builder',
     templateUrl: './tad-form-builder.component.html',
     styleUrls: ['./tad-form-builder.component.scss'],
 })
