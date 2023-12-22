@@ -1,6 +1,6 @@
 import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
-import { SampleComponent } from '@tad/form-components';
+import { SampleComponent } from '@tad/components';
 @Component({
     standalone: true,
     imports: [RouterModule, SampleComponent],

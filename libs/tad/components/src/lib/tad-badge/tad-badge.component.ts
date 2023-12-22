@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'tad-sample',
+    selector: 'tad-badge',
     standalone: true,
     imports: [CommonModule],
-    templateUrl: './sample.component.html',
-    styleUrl: './sample.component.scss',
+    templateUrl: './tad-badge.component.html',
+    styleUrl: './tad-badge.component.scss',
 })
-export class SampleComponent {}
+export class TadBadgeComponent {}

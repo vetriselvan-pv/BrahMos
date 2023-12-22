@@ -1,0 +1,151 @@
+@use './variables' as var;
+
+/*
+* @description here we are setting the styles based on the screen width
+ */
+@each $key, $value in var.$breakpoints {
+    @media #{$value} {
+        h1 {
+            font-size: map-get(var.$h1, #{$key}-font-size);
+            font-weight: map-get(var.$h1, #{$key}-font-weight);
+            line-height: map-get(var.$h1, #{$key}-line-height);
+        }
+
+        h2 {
+            font-size: map-get(var.$h2, #{$key}-font-size);
+            font-weight: map-get(var.$h2, #{$key}-font-weight);
+            line-height: map-get(var.$h2, #{$key}-line-height);
+        }
+
+        h3 {
+            font-size: map-get(var.$h3, #{$key}-font-size);
+            font-weight: map-get(var.$h3, #{$key}-font-weight);
+            line-height: map-get(var.$h3, #{$key}-line-height);
+        }
+
+        h4 {
+            font-size: map-get(var.$h4, #{$key}-font-size);
+            font-weight: map-get(var.$h4, #{$key}-font-weight);
+            line-height: map-get(var.$h4, #{$key}-line-height);
+        }
+
+        h5 {
+            font-size: map-get(var.$h5, #{$key}-font-size);
+            font-weight: map-get(var.$h5, #{$key}-font-weight);
+            line-height: map-get(var.$h5, #{$key}-line-height);
+        }
+
+        input[type='text'] {
+            @each $textKey, $textValue in var.$inputText {
+                #{$textKey}: map-get(var.$inputText, $textKey);
+            }
+        }
+
+        input[type='date'] {
+            @each $textKey, $textValue in var.$inputDate {
+                #{$textKey}: map-get(var.$inputDate, $textKey);
+            }
+        }
+
+        input:focus,
+        input:focus-visible {
+            @each $textKey, $textValue in var.$inputFocused {
+                #{$textKey}: map-get(var.$inputFocused, $textKey);
+            }
+        }
+
+        textarea {
+            @each $textKey, $textValue in var.$inputTextArea {
+                #{$textKey}: map-get(var.$inputTextArea, $textKey);
+            }
+        }
+
+        textarea:focus,
+        textarea:focus-visible {
+            @each $textKey, $textValue in var.$inputFocused {
+                #{$textKey}: map-get(var.$inputFocused, $textKey);
+            }
+        }
+
+        /** tad badge wrapper css class */
+        .tad-badge {
+            min-width: map-get(var.$badge, #{$key}-width);
+            min-height: map-get(var.$badge, #{$key}-height);
+            max-height: map-get(var.$badge, #{$key}-height);
+            font-size: map-get(var.$badge, #{$key}-font-size);
+            line-height: map-get(var.$badge, #{$key}-line-height);
+            letter-spacing: map-get(var.$badge, #{$key}-letter-spacing);
+
+            @each $badgeKey, $badgeValue in var.$badgeprops {
+                #{$badgeKey}: map-get(var.$badgeprops, $badgeKey);
+            }
+        }
+
+        /** tad chips css */
+        .tad-chips {
+            @if (type-of(#{$key}-chips) ==map) {
+                @each $chipsKey,
+                    $chipsValue in map-get(var.$chipsProps, #{$key}-chips)
+                {
+                    #{$chipsKey}: map-get(#{$key}-chipsProps, $chipsKey);
+                }
+
+                &.tad-chips-contained {
+                    &.tad-chips-light {
+                        background: map-get(
+                            var.$chipsContainedLight,
+                            'background'
+                        );
+
+                        &.tad-chips-disabled {
+                            background: map-get(
+                                var.$chipsContainedLight,
+                                'disableBackground'
+                            );
+                        }
+                    }
+
+                    &.tad-chips-dark {
+                        background: map-get(
+                            var.$chipsContainerDark,
+                            'background'
+                        );
+
+                        &.tad-chips-disabled {
+                            background: map-get(
+                                var.$chipsContainerDark,
+                                'disableBackground'
+                            );
+                        }
+                    }
+                }
+
+                &.tad-chips-outlined {
+                    background: map-get(var.$chipsOutlined, 'background');
+                    border: map-get(var.$chipsOutlined, 'border');
+                }
+            }
+        }
+    }
+}
+
+/** banner wrapper css */
+.tad-banner {
+    @each $bannerKey, $bannerValue in var.$bannerProps {
+        #{$bannerKey}: map-get(var.$bannerProps, $bannerKey);
+    }
+}
+
+/** elevation class to define the box shawdow in the shtml define the css as elevation-1 to elevation-5 */
+@each $elevationKey, $elevationValue in var.$elevation-box-shadow {
+    .#{$elevationKey} {
+        box-shadow: map-get(var.$elevation-box-shadow, $elevationKey);
+    }
+}
+
+/** divider will be common and  */
+.tad-divider {
+    @each $dividerKey, $dividerValue in var.$dividerProps {
+        #{$dividerKey}: map-get(var.$dividerProps, $dividerKey);
+    }
+}
