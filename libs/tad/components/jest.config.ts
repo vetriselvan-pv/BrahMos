@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-    displayName: 'tad-form-components',
+    displayName: 'tad-components',
     preset: '../../../jest.preset.js',
     setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-    coverageDirectory: '../../../coverage/libs/tad/form-components',
+    coverageDirectory: '../../../coverage/libs/tad/components',
     transform: {
         '^.+\\.(ts|mjs|js|html)$': [
             'jest-preset-angular',

@@ -26,8 +26,9 @@
             "@brahmos/studio-core": ["libs/studio-core/src/index.ts"],
             "@brahmos/studio-modal": ["libs/studio-modal/src/index.ts"],
             "@brahmos/viva-aca-shared": ["libs/viva-aca-shared/src/index.ts"],
+            "@tad/components": ["libs/tad/components/src/index.ts"],
             "@tad/core": ["libs/tad/core/src/index.ts"],
-            "@tad/form-components": ["libs/tad/form-components/src/index.ts"]
+            "@tad/stepper": ["libs/tad/stepper/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

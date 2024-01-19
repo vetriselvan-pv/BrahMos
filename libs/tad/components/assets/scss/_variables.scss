@@ -1,0 +1,310 @@
+/** Files container all the variable for scss and use throught out the project . Before making changes please consider it will change the entire project theme */
+
+/* primary color for the project   */
+$primary: #5d667d !default;
+$primaryHover: #444d64 !default;
+$primaryFocused: #2a334a !default;
+$primarySelected: #444d64 !default;
+$primaryPressed: #101930 !default;
+$primaryLight: #edf2ff !default;
+$primaryHoverLight: #c3cce3 !default;
+$primaryFocusedLight: #2a334a !default;
+$primarySelectedLight: #c3cce3 !default;
+$primaryPressedLight: #9099b0 !default;
+
+/* success color */
+$success: #2f8c33 !default;
+$successHover: #16731a !default;
+$successFocused: #005604 !default;
+$successSelected: #16731a !default;
+$successPressed: #002a02 !default;
+$successLight: #dfffe0 !default;
+$successHoverLight: #95f299 !default;
+$successFocusedLight: #7cd980 !default;
+$successSelectedLight: #95f299 !default;
+$successPressedLight: #62bf66 !default;
+
+/* negative color */
+$negative: #d83535 !default;
+$negativeFocused: #a50202 !default;
+$negativeHover: #bf1c1c !default;
+$negativeSelected: #bf1c1c !default;
+$negativePressed: #530000 !default;
+$negativeLight: #ffecec !default;
+$negativeFocusedLight: #ff9292 !default;
+$negativeHoverLight: #ffb6b6 !default;
+$negativeSelectedLight: #ffb6b6 !default;
+$negativePressedLight: #ff6d6d !default;
+
+/* warning color */
+$warning: #af5400 !default;
+$warningFocused: #582a00 !default;
+$warningHover: #843f00 !default;
+$warningSelected: #843f00 !default;
+$warningPressed: #2b1500 !default;
+$warningLight: #ffefe0 !default;
+$warningFocusedLight: #ffa049 !default;
+$warningHoverLight: #ffbf85 !default;
+$warningSelectedLight: #ffbf85 !default;
+$warningPressedLight: #ff800b !default;
+
+/** Text color  */
+$textGrey: #8a8894 !default;
+$textBlack: #212121 !default;
+$textWhite: #fff !default;
+$backdrop: rgba(0, 0, 0, 0.38);
+$disabledLight: #f2f2f2;
+$disabledDark: #666666;
+
+/* to define the class based on media querry */
+$breakpoints: (
+    sm: 'screen and ( min-width : 320px ) and ( max-width : 640px )',
+    md: 'screen and ( min-width: 641px ) and ( max-width : 1280px )',
+    lg: 'screen and (min-width : 1280px ) and ( max-width : 1920px )',
+) !default;
+
+/* all media have 12 divisions only  */
+$colItems: 12 !default;
+
+/* heading and p css based on media*/
+$h1: (
+    sm-font-size: 24px,
+    sm-font-weight: 700,
+    sm-line-height: 28.8px,
+    md-font-size: 48px,
+    md-font-weight: 700,
+    md-line-height: 52.8px,
+    lg-font-size: 56px,
+    lg-font-weight: 700,
+    lg-line-height: 61.6px,
+);
+
+$h2: (
+    sm-font-size: 20px,
+    sm-font-weight: 700,
+    sm-line-height: 24px,
+    md-font-size: 32px,
+    md-font-weight: 700,
+    md-line-height: 38.4px,
+    lg-font-size: 48px,
+    lg-font-weight: 700,
+    lg-line-height: 57.6px,
+);
+
+$h3: (
+    sm-font-size: 18px,
+    sm-font-weight: 700,
+    sm-line-height: 21.6px,
+    md-font-size: 24px,
+    md-font-weight: 700,
+    md-line-height: 28.8px,
+    lg-font-size: 32px,
+    lg-font-weight: 700,
+    lg-line-height: 38.4px,
+);
+
+$h4: (
+    sm-font-size: 16px,
+    sm-font-weight: 700,
+    sm-line-height: 19.2px,
+    md-font-size: 18px,
+    md-font-weight: 700,
+    md-line-height: 21.6px,
+    lg-font-size: 24px,
+    lg-font-weight: 700,
+    lg-line-height: 28.8px,
+);
+
+$h5: (
+    sm-font-size: 14px,
+    sm-font-weight: 700,
+    sm-line-height: 16.8px,
+    md-font-size: 16px,
+    md-font-weight: 700,
+    md-line-height: 19.2px,
+    lg-font-size: 18px,
+    lg-font-weight: 700,
+    lg-line-height: 21.6px,
+);
+
+$btn-primary: (
+    sm-padding: 8px 24px,
+);
+
+$inputText: (
+    display: flex,
+    min-width: 240px,
+    padding: 16px 20px,
+    flex-direction: column,
+    justify-content: center,
+    align-items: flex-start,
+    gap: 10px,
+    border-radius: 4px,
+    background: $primaryLight,
+    color: $textBlack,
+    border: 1px solid $primaryLight,
+    outline: none,
+    max-height: 50px,
+);
+
+$inputFocused: (
+    border: 1px solid $primaryFocused,
+);
+
+$inputTextArea: (
+    display: flex,
+    padding: 8px 20px,
+    align-items: center,
+    align-self: stretch,
+    border-radius: 4px,
+    background: $primaryLight,
+    outline: none,
+    border: 1px solid transparent,
+);
+
+$inputTextFont: (
+    font-size: 16px,
+    font-style: normal,
+    font-weight: 400,
+    line-height: 24px,
+);
+
+$inputDate: (
+    display: flex,
+    min-width: 240px,
+    padding: 16px 20px,
+    align-items: center,
+    gap: 10px,
+    border-radius: 4px,
+    background: #f7f7fd,
+    color: #212121,
+    border: 1px solid #f7f7fd,
+    outline: none,
+    max-height: 50px,
+);
+
+/** Badge component */
+
+$badge: (
+    sm-width: 12px,
+    sm-height: 12px,
+    sm-font-size: 12px,
+    sm-line-height: 16px,
+    sm-letter-spacing: 0.4px,
+    md-width: 20px,
+    md-height: 20px,
+    md-font-size: 12px,
+    md-line-height: 16px,
+    md-letter-spacing: 0.4px,
+    lg-width: 28px,
+    lg-height: 28px,
+    lg-font-size: 14px,
+    lg-line-height: 20px,
+    lg-letter-spacing: 0.25px,
+);
+
+$badgeprops: (
+    text-align: center,
+    font-style: normal,
+    font-weight: 400,
+    border-radius: 32px,
+    border: 1px solid $primary,
+    background: $primary,
+    display: flex,
+    align-items: center,
+    justify-content: center,
+    color: $textWhite,
+);
+
+$bannerProps: (
+    display: flex,
+    padding: 8px 8px 8px 16px,
+    flex-direction: column,
+    justify-content: center,
+    align-items: flex-start,
+    border-bottom: 1px solid $primary,
+    background: $textWhite,
+);
+
+$btnContainerProps: (
+    display: inline-flex,
+    padding: 8px 16px,
+    justify-content: center,
+    align-items: center,
+    gap: 4px,
+    border-radius: 4px,
+    background: var(--Action-Fill-Primary-Default, #4759ff),
+);
+
+$elevation-box-shadow: (
+    elevation-1:
+        '0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)',
+    elevation-2:
+        '0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 2px 6px 2px rgba(0, 0, 0, 0.15)',
+    elevation-3:
+        '0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30)',
+    elevation-4:
+        '0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.30)',
+    elevation-5:
+        '0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.30)',
+);
+
+$lg-chipsProps: (
+    display: inline-flex,
+    height: 32px,
+    padding: 4px,
+    justify-content: center,
+    align-items: center,
+    flex-shrink: 0,
+    border-radius: 32px,
+);
+
+$md-chipsProps: (
+    display: inline-flex,
+    height: 24px,
+    padding: 0px 2px,
+    justify-content: center,
+    align-items: center,
+    flex-shrink: 0,
+    border-radius: 32px,
+);
+
+$sm-chipsProps: (
+    display: inline-flex,
+    height: 18px,
+    padding: 0px 1px,
+    justify-content: center,
+    align-items: center,
+    flex-shrink: 0,
+    border-radius: 32px,
+);
+
+$chipsOutlined: (
+    border: 1px solid $primary,
+    background: $primaryLight,
+);
+
+$chipsContainedLight: (
+    background: $primaryLight,
+    disableBackground: $disabledLight,
+);
+
+$chipsContainerDark: (
+    background: $primary,
+    disableBackground: $disabledDark,
+);
+
+$chipsProps: (
+    lg-chips: $lg-chipsProps,
+    md-chips: $md-chipsProps,
+    sm-chips: $sm-chipsProps,
+);
+
+/** tad divider props */
+$dividerProps: (
+    opacity: 0.24,
+    border: 0.5px solid $disabledDark,
+    height: 100%,
+    width: 100%,
+    display: block,
+);

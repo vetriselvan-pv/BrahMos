@@ -94,7 +94,7 @@
             "linter": "eslint",
             "unitTestRunner": "jest",
             "buildable": true,
-            "analyzeSourceFiles": true
+            "style": "scss"
         },
         "@nx/angular:component": {
             "style": "scss"

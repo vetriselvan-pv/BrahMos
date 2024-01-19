@@ -1,0 +1,44 @@
+{
+    "name": "@tad/components",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/tad/components/src",
+    "prefix": "tad",
+    "tags": [],
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/angular:package",
+            "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+            "options": {
+                "project": "libs/tad/components/ng-package.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/tad/components/tsconfig.lib.prod.json"
+                },
+                "development": {
+                    "tsConfig": "libs/tad/components/tsconfig.lib.json"
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "libs/tad/components/jest.config.ts"
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "libs/tad/components/**/*.ts",
+                    "libs/tad/components/**/*.html",
+                    "libs/tad/core/package.json"
+                ]
+            }
+        }
+    }
+}
