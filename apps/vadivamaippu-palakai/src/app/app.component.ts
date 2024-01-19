@@ -1,9 +1,15 @@
 import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 import { SampleComponent } from '@tad/components';
+import { TadStepComponent, TadStepperComponent } from '@tad/stepper';
 @Component({
     standalone: true,
-    imports: [RouterModule, SampleComponent],
+    imports: [
+        RouterModule,
+        SampleComponent,
+        TadStepperComponent,
+        TadStepComponent,
+    ],
     selector: 'brahmos-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
