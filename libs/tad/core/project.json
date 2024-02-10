@@ -31,14 +31,7 @@
         },
         "lint": {
             "executor": "@nx/eslint:lint",
-            "outputs": ["{options.outputFile}"],
-            "options": {
-                "lintFilePatterns": [
-                    "libs/tad/core/**/*.ts",
-                    "libs/tad/core/**/*.html",
-                    "libs/tad/core/package.json"
-                ]
-            }
+            "outputs": ["{options.outputFile}"]
         }
     }
 }

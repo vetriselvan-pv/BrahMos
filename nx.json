@@ -42,6 +42,14 @@
                     "codeCoverage": true
                 }
             }
+        },
+        "@nx/eslint:lint": {
+            "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/.eslintignore"
+            ],
+            "cache": false
         }
     },
     "namedInputs": {
@@ -99,5 +107,6 @@
         "@nx/angular:component": {
             "style": "scss"
         }
-    }
+    },
+    "nxCloudAccessToken": "ZWJhOTZiZGEtODViMC00ZjQzLWEzYTItZWE1MjE3MjI0MzUxfHJlYWQtd3JpdGU="
 }

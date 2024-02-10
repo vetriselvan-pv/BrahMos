@@ -31,14 +31,7 @@
         },
         "lint": {
             "executor": "@nx/eslint:lint",
-            "outputs": ["{options.outputFile}"],
-            "options": {
-                "lintFilePatterns": [
-                    "libs/tad/stepper/**/*.ts",
-                    "libs/tad/stepper/**/*.html",
-                    "libs/tad/stepper/package.json"
-                ]
-            }
+            "outputs": ["{options.outputFile}"]
         }
     }
 }
