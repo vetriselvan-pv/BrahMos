@@ -2,15 +2,17 @@
 <div class="tad-stepper-group">
   <div class="tad-stepper-header">
     @for (step of stepsContent; track step ; let i = $index; let last = $last) {
-    <ng-container [ngTemplateOutlet]="stepTemplate" [ngTemplateOutletContext]="{step: step, i: i}">
-    </ng-container>
-    @if (!last) {
+    <div class="tad-step-header">
+      <ng-container [ngTemplateOutlet]="stepTemplate" [ngTemplateOutletContext]="{step: step, i: i}">
+      </ng-container>
+      @if (!last) {
       <div class="divider"></div>
-    }
+      }
+    </div>
     }
   </div>
   @for (step of stepsContent; track i ; let i = $index) {
-  <div class="tad-step-content">
+  <div  class="tad-step-content">
     <ng-container [ngTemplateOutlet]="step.content"></ng-container>
   </div>
   }

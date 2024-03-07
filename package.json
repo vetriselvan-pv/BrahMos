@@ -22,6 +22,7 @@
         "@commitlint/cli": "^17.4.4",
         "@commitlint/config-conventional": "^17.4.4",
         "@ngxs/devtools-plugin": "^3.8.0",
+        "@nrwl/eslint-plugin-nx": "^18.0.7",
         "@nx/angular": "18.0.4",
         "@nx/cypress": "18.0.4",
         "@nx/detox": "18.0.4",

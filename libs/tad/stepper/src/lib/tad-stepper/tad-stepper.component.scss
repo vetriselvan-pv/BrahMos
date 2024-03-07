@@ -4,13 +4,16 @@
     align-items: center;
     gap: 16px;
     width: 100%;
+    .tad-step-header {
+        display: flex;
+        align-items: center;
 
-    .divider {
-        background-color: #666;
-        height: 1px;
-        width: 32px;
+        .divider {
+            background-color: #666;
+            height: 1px;
+            width: 32px;
+        }
     }
-
     .tad-stepper-header__heading {
         display: flex;
         align-items: center;
