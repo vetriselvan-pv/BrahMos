@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IBoardData, IMenuList } from '@brahmos/studio-modal';
+import { IDesignElementConfig, IMenuList } from '@brahmos/studio-modal';
 
 @Component({
     selector: 'db-menu-bar',
@@ -7,7 +7,7 @@ import { IBoardData, IMenuList } from '@brahmos/studio-modal';
     styleUrls: ['./menu-bar.component.scss'],
 })
 export class DBMenuBarComponent {
-    transferringItem: IBoardData | undefined = undefined;
+    transferringItem: IDesignElementConfig | undefined = undefined;
     menuList: IMenuList[] = [
         {
             heading: 'Components',

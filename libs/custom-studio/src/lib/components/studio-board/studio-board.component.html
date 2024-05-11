@@ -13,7 +13,7 @@
 
 <!-- switch case based -->
 <mat-card class="studio-board-container">
-  <ng-container *ngFor="let item of droppableObjects; let index = index">
+  <ng-container *ngFor="let item of studioService.element; let index = index">
     <db-template [parentId]="'parent_'+index" [item]="item"></db-template>
   </ng-container>
   <div [dbDroppable]="{ zone : 'dbZone' }" (droppableComplete)="onDrop($event)" class="dropable-area">

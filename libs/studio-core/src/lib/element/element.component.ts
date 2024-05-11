@@ -15,7 +15,7 @@ import {
     DBDynamicTemplateDirective,
     DynamicTemplateService,
 } from '@brahmos/shared-directives';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 
 @Component({
     selector: 'db-element',
@@ -28,7 +28,7 @@ export class ElementComponent implements AfterViewInit {
 
     @ViewChild(ElementComponent) childDrag!: ElementComponent;
 
-    childData: IBoardData[] = [];
+    childData: IDesignElementConfig[] = [];
 
     constructor(private _dynamicTemplateService: DynamicTemplateService) {}
     ngAfterViewInit(): void {

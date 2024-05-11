@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 import { DragService } from '../../services/drag.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { DragService } from '../../services/drag.service';
     styleUrls: ['./menu-bar-list.component.scss'],
 })
 export class DBMenuBarListComponent {
-    @Input() optionlist: IBoardData[] = [];
+    @Input() optionlist: IDesignElementConfig[] = [];
     /**
      * @desc responsible for handling the zone drop event
      * @param {any} event - the event data specific to the implementation

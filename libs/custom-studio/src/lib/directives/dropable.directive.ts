@@ -10,7 +10,7 @@ import {
     Renderer2,
 } from '@angular/core';
 import { DragService } from '../services/drag.service';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 
 // 1
 @Directive({
@@ -178,13 +178,13 @@ export class DBDroppableDirective implements OnInit, OnDestroy {
 
 // 11
 export interface DroppableOptions {
-    data?: IBoardData;
+    data?: IDesignElementConfig;
     zone?: string;
 }
 
 // Droppable Event Object
 export interface IDroppableEventObject {
-    data: IBoardData;
+    data: IDesignElementConfig;
     zone: unknown;
     event: DragEvent;
 }

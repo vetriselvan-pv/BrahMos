@@ -1,0 +1,36 @@
+import { IDesignElementConfig } from '@brahmos/studio-modal';
+
+export const HTMLELEMENTCONFIG: IDesignElementConfig[] = [
+    {
+        hoverText: 'Div',
+        icon: './assets/svg/Div.svg',
+        placeholder: 'a',
+        tagName: 'a',
+        zones: ['dbZone'],
+        defaultValue: 'div',
+        child: [],
+        parentId: 'parent',
+        cssClass: [],
+        forName: '',
+        id: '',
+        selector: '',
+        uId: '',
+        value: '',
+    },
+    {
+        hoverText: 'Div',
+        icon: './assets/svg/Div.svg',
+        placeholder: 'Div',
+        tagName: 'div',
+        zones: ['dbZone'],
+        defaultValue: 'div',
+        child: [],
+        parentId: 'parent',
+        cssClass: [],
+        forName: '',
+        id: '',
+        selector: '',
+        uId: '',
+        value: '',
+    },
+];

@@ -18,16 +18,16 @@ export class AppComponent {
     title = 'vadivamaippu-palakai';
 
     constructor() {
-        const editorExtensionId = 'cgljefmnenafbhocfhcncjjoibohoojl';
-        chrome.runtime.sendMessage(
-            editorExtensionId,
-            { openUrlInEditor: '' },
-            function (response) {
-                console.log('extension ', response);
-            }
-        );
-        const port = chrome.runtime.connect(editorExtensionId);
-        port.postMessage({ new: 'Data' });
+        // const editorExtensionId = 'cgljefmnenafbhocfhcncjjoibohoojl';
+        // chrome.runtime.sendMessage(
+        //     editorExtensionId,
+        //     { openUrlInEditor: '' },
+        //     function (response) {
+        //         console.log('extension ', response);
+        //     }
+        // );
+        // const port = chrome.runtime.connect(editorExtensionId);
+        // port.postMessage({ new: 'Data' });
         // chrome.tabs.query(
         //     { active: true, currentWindow: true },
         //     function (tabs) {

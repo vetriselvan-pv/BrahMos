@@ -1,6 +1,6 @@
 import { CdkDragStart, CdkDropList } from '@angular/cdk/drag-drop';
 import { Component, Input } from '@angular/core';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 import { DynamicTemplateService } from '@brahmos/shared-directives';
 
 @Component({
@@ -9,12 +9,12 @@ import { DynamicTemplateService } from '@brahmos/shared-directives';
     styleUrls: ['./menu-bar-list.component.scss'],
 })
 export class MenuBarListComponent {
-    @Input() optionlist: IBoardData[] = [];
+    @Input() optionlist: IDesignElementConfig[] = [];
     doneList!: CdkDropList<unknown>[];
 
     constructor(protected _templateService: DynamicTemplateService) {}
 
-    transferringItem: IBoardData | undefined = undefined;
+    transferringItem: IDesignElementConfig | undefined = undefined;
 
     noReturnPredicate() {
         return false;
@@ -23,7 +23,7 @@ export class MenuBarListComponent {
         this.transferringItem = undefined;
     }
 
-    exited(e: CdkDragStart<IBoardData>) {
+    exited(e: CdkDragStart<IDesignElementConfig>) {
         this.transferringItem = e.source.data;
     }
 }

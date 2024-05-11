@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 import { IDroppableEventObject } from '../..//directives/dropable.directive';
-import { AddChildElement, IStudioTree } from '../../state';
-import { Store } from '@ngxs/store';
+import { StudioStateService } from '../../services/studio-state.service';
 
 @Component({
     selector: 'db-template',
@@ -10,17 +9,17 @@ import { Store } from '@ngxs/store';
     styleUrls: ['./template.component.scss'],
 })
 export class DBTemplateComponent {
-    @Input() item!: IBoardData;
+    @Input() item!: IDesignElementConfig;
     @Input() parentId!: string;
     id = '';
 
-    constructor(private _store: Store) {}
+    constructor(private _studioState: StudioStateService) {}
 
     onDrop(e: IDroppableEventObject, elementIndex: number) {
         e.event.preventDefault();
         e.event.stopPropagation();
         console.log(e);
-        const data: IStudioTree = {
+        const data: IDesignElementConfig = {
             child: e.data.child,
             cssClass: e.data.cssClass,
             tagName: e.data.tagName,
@@ -31,7 +30,11 @@ export class DBTemplateComponent {
             hoverText: '',
             placeholder: '',
             parentId: `${this.parentId}_${elementIndex}`,
+            zones: [],
         };
-        this._store.dispatch(new AddChildElement(data, this.parentId));
+        this._studioState.addChildElement(
+            data,
+            `${this.parentId}_${elementIndex}`
+        );
     }
 }

@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { CdkDragDrop, copyArrayItem } from '@angular/cdk/drag-drop';
-import { IBoardData, IMenuList } from '@brahmos/studio-modal';
+import { IDesignElementConfig, IMenuList } from '@brahmos/studio-modal';
 import { DynamicTemplateService } from '@brahmos/shared-directives';
 
 @Component({
@@ -9,7 +9,7 @@ import { DynamicTemplateService } from '@brahmos/shared-directives';
     styleUrls: ['./menu-bar.component.scss'],
 })
 export class MenuBarComponent {
-    transferringItem: IBoardData | undefined = undefined;
+    transferringItem: IDesignElementConfig | undefined = undefined;
     menuList: IMenuList[] = [
         {
             heading: 'Components',

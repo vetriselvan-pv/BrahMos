@@ -7,7 +7,7 @@ import {
 } from '@angular/cdk/drag-drop';
 import { Component, ViewChild } from '@angular/core';
 import { DynamicTemplateService } from '@brahmos/shared-directives';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 
 @Component({
     selector: 'db-studio-board',
@@ -17,7 +17,7 @@ import { IBoardData } from '@brahmos/studio-modal';
 export class StudioBoardComponent {
     @ViewChild(CdkDropList) doneList!: CdkDropList;
 
-    boardData: IBoardData;
+    boardData: IDesignElementConfig;
 
     constructor(protected _dynamicTemplateService: DynamicTemplateService) {
         this.boardData = {
@@ -30,7 +30,7 @@ export class StudioBoardComponent {
         };
     }
 
-    drop(event: CdkDragDrop<IBoardData[], IBoardData[]>) {
+    drop(event: CdkDragDrop<IDesignElementConfig[], IDesignElementConfig[]>) {
         console.log(event);
         if (
             event.previousContainer.id === 'board_0' &&

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Action, State, StateContext } from '@ngxs/store';
 import { AddChildElement, AddElement } from './studio.actions';
 import { IChildFn, IStudio } from './studio.model';
-import { childOne, childTwo } from './childFn.function';
+// import { StateOperator, patch, updateItem } from '@ngxs/store/operators';
 
 @State<IStudio>({
     name: 'Studio',
@@ -14,13 +14,6 @@ import { childOne, childTwo } from './childFn.function';
 export class StudioState {
     childMap: { [k: number]: IChildFn } = {};
 
-    constructor() {
-        this.childMap = {
-            1: childOne,
-            2: childTwo,
-        };
-    }
-
     @Action(AddElement)
     addElement(ctx: StateContext<IStudio>, action: AddElement) {
         const state = ctx.getState();
@@ -30,16 +23,35 @@ export class StudioState {
             ...state,
         });
     }
-
+    /**
+     *
+     *  note added just to remove the error it won't work
+     */
     @Action(AddChildElement)
     addChildElement(ctx: StateContext<IStudio>, action: AddChildElement) {
+        // const parentIdIndex = action.parentId.split('_').slice(1) as string[];
         const state = ctx.getState();
-        console.log(action);
-        const parentIdIndex = action.parentId.split('_');
-        this.childMap[parentIdIndex.length - 1](
-            state.parent,
-            action.element,
-            parentIdIndex
-        );
+        state.parent.push(action.element);
+        console.log(state, action);
+        ctx.setState({
+            ...state,
+        });
+        // ctx.patchState(
+        //   patch<IStudio>({
+        //     parent[Number(parentIdIndex[0])]: patch({
+        //         child : action.element.child
+        //     }
+        //     )
+        //   })
+        // )
     }
+
+    // patchElement(entity: IStudioTree): StateOperator<IStudioTree> {
+    //     return (state: IStudio) => {
+    //       console.log(entity)
+    //         return {
+    //           ...state.parent[0]
+    //         };
+    //     };
+    // }
 }

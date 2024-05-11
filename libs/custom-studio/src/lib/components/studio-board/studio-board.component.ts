@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 import { DragService } from '../../services/drag.service';
 import { IDroppableEventObject } from '../../directives/dropable.directive';
 import { Store } from '@ngxs/store';
-import { AddElement, IStudioTree } from '../../state';
+import { AddElement } from '../../state';
+import { StudioStateService } from '../../services/studio-state.service';
 
 @Component({
     selector: 'db-studio-board',
@@ -13,10 +14,14 @@ import { AddElement, IStudioTree } from '../../state';
 export class DBStudioBoardComponent {
     private draggableElements = 3;
     private zonePrefix = 'zone-';
-    public droppableObjects: Array<IBoardData> = [];
-    public draggableObjects: Array<Array<IBoardData>> = [[], [], []];
+    public droppableObjects: Array<IDesignElementConfig> = [];
+    public draggableObjects: Array<Array<IDesignElementConfig>> = [[], [], []];
 
-    constructor(protected dragService: DragService, private _store: Store) {}
+    constructor(
+        protected dragService: DragService,
+        private _store: Store,
+        public studioService: StudioStateService
+    ) {}
 
     /**
      * @desc responsible for generating the zones that a draggable element can go too.
@@ -37,7 +42,7 @@ export class DBStudioBoardComponent {
     onDrop(e: IDroppableEventObject) {
         console.log(e);
         this.droppableObjects.push(e.data);
-        const data: IStudioTree = {
+        const data: IDesignElementConfig = {
             child: e.data.child,
             cssClass: e.data.cssClass,
             tagName: e.data.tagName,
@@ -48,8 +53,10 @@ export class DBStudioBoardComponent {
             hoverText: '',
             placeholder: '',
             parentId: `parent_${this.droppableObjects.length - 1}`,
+            zones: [],
         };
         this._store.dispatch(new AddElement(data, -1));
+        this.studioService.addParentElement(data);
     }
 
     dragOver(event: Event) {

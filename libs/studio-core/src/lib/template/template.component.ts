@@ -8,7 +8,7 @@ import {
     SimpleChanges,
 } from '@angular/core';
 import { DynamicTemplateService } from '@brahmos/shared-directives';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 
 @Component({
     selector: 'db-template',
@@ -16,12 +16,14 @@ import { IBoardData } from '@brahmos/studio-modal';
     styleUrls: ['./template.component.scss'],
 })
 export class TemplateComponent implements OnChanges {
-    @Input() item!: IBoardData;
-    @Output() itemDrop: EventEmitter<CdkDragDrop<IBoardData>> =
-        new EventEmitter<CdkDragDrop<IBoardData>>();
+    @Input() item!: IDesignElementConfig;
+    @Output() itemDrop: EventEmitter<CdkDragDrop<IDesignElementConfig>> =
+        new EventEmitter<CdkDragDrop<IDesignElementConfig>>();
     id = '';
     constructor(protected _templateService: DynamicTemplateService) {}
-    public onDragDrop(event: CdkDragDrop<IBoardData, IBoardData>): void {
+    public onDragDrop(
+        event: CdkDragDrop<IDesignElementConfig, IDesignElementConfig>
+    ): void {
         this.itemDrop.emit(event);
         console.log('child', event);
     }

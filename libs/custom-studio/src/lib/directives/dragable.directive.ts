@@ -8,7 +8,7 @@ import {
     Renderer2,
 } from '@angular/core';
 import { DragService } from '../services/drag.service';
-import { IBoardData } from '@brahmos/studio-modal';
+import { IDesignElementConfig } from '@brahmos/studio-modal';
 
 // 1
 @Directive({
@@ -20,11 +20,11 @@ export class DBDraggableDirective implements OnInit, OnDestroy {
     private onDragEnd!: Function;
 
     // Options for the directive
-    private options!: IBoardData;
+    private options!: IDesignElementConfig;
 
     // 2
     @Input()
-    set dbDraggable(options: IBoardData) {
+    set dbDraggable(options: IDesignElementConfig) {
         if (options) {
             this.options = options;
         }
@@ -90,6 +90,6 @@ export class DBDraggableDirective implements OnInit, OnDestroy {
 }
 
 // 9
-// export interface DraggableOptions extends IBoardData {
+// export interface DraggableOptions extends IDesignElementConfig {
 //     zones?: Array<string>;
 // }
